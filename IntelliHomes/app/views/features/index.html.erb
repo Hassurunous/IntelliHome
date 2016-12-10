@@ -1,0 +1,10 @@
+<h1 class="page-head">All Features List</h1>
+<div class="container">
+    <div class="row small-offset-1">
+        <% @features.in_groups_of(2, false) do |row_features| %>
+            <% for feature in row_features %>
+                <div id="<%= "feature_#{feature.id}" %>" class="small-4 small-offset-1 columns tile"><%= feature.description %></div>
+            <% end %>
+        <% end %>
+    </div>
+</div>

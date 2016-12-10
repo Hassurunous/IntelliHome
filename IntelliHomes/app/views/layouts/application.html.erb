@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+        <%= stylesheet_link_tag    "application" %>
+        <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+
+    <body>
+        <!-- NAVIGATION BAR -->
+        <div class="top-bar">
+            <div class="top-bar-title">
+                <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle></button>
+                </span>
+                <strong>
+                    <%= link_to root_url, class:"title-bar-title" do %>
+                        <%= image_tag 'logo.png', width: 40, height: 40, alt: 'Logo'%>  IntelliHomes
+                    <% end %>
+                </strong>
+            </div>
+            <div id="responsive-menu">
+                <div class="top-bar-left">
+                    <ul class="menu">
+                        <li>
+                            <a href="#">Categories</a>
+                        </li>
+                        <li>
+                            <a href="#">All Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Popular Features</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                        <li>
+                            <a href="#">My List</a>
+                        </li>
+                        <li>
+                            <a href="#">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- BODY -->
+        <%= yield %>
+
+        <!-- FOOTER -->
+
+    </body>
+</html>
