@@ -1,0 +1,35 @@
+PITCH DECK
+
+1. Vision
+	IntelliHome is set to be the discovery layer for the smart home market by flipping the existing discovery process on its head. Instead of shopping for products, you shop for solutions; This is done by indicating the features you’d like for your smart home, while we provide the products you need to buy to make that happen.
+
+2. Validation
+(To be determined)
+
+3. Market Opportunity
+	According to conservative projections from 2006, the smart home market should be worth somewhere between 30 to 50 billion dollars today. The reality, however, is that the market is currently only at approximately 11 billion dollars. By providing an efficient, user friendly discovery model, IntelliHome is strategically positioned to create growth in this space, while generating revenue from these transactions.
+
+4. The problem
+	Determining compatibility between smart products is an intimidating and messy affair. Furthermore, the moment you go online and begin shopping for smart home tech, you are assaulted with questions of programming and installation. It’s an ordeal, and most people give up halfway in.
+
+5. Product
+*Show product screenshots/Demo product*
+
+6. Revenue Model
+	IntelliHome will generate revenue by acting as a vendor of smart home products, and by presenting relevant, non-intrusive ads that will be ingrained into the website design.
+
+7. Marketing and growth strategy
+We will use a combination of SEO and SEM to promote and increase the monthly user base of our website, with a focus on PPC advertising. Furthermore, depending on the amount of revenue, we could invest in more traditional forms of advertising such as billboards, TV and radio spots.
+
+8. Team
+*Show slide with co-founders pictures and past accomplishments*
+Alternative: *shouting* Michael and Gian against the world baby!
+
+9. Financials
+(To be determined)
+
+10. Competition
+As competition, we have websites who provide smart products like SmartHome.com, Amazon.com, and BestBuy.com, as well as websites that provide a database of compatible products like Smarthomedb.com. However, these websites stick to the currently confusing paradigm of shopping for products, leaving the customer to deal with compatibility and several other problems. IntelliHome brings value by letting the customer focusing on features, while we take care of the rest. It’s simpler and fast.
+
+11. Investment Ask
+Give us a billion dollars and we will overtake the smart home space, and rule with an Iron Fist, mightily acquiring and dismantling every competitor that tries to defy our billion dollar monopoly.
