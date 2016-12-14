@@ -3,7 +3,7 @@
     <div class="row small-offset-1">
         <% @features.in_groups_of(2, false) do |row_features| %>
             <% for feature in row_features %>
-                <div id="<%= "feature_#{feature.id}" %>" class="small-4 small-offset-1 columns tile"><%= feature.description %></div>
+                <div id="<%= "feature_#{feature.id}" %>" class="small-4 small-offset-1 columns tile tile-label"><%= feature.description %></div>
             <% end %>
         <% end %>
     </div>

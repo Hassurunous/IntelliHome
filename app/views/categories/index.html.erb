@@ -1,0 +1,13 @@
+<h1 class="page-head">Feature Categories</h1>
+<div class="container">
+    <div class="row">
+        <% @categories.in_groups_of(3, false) do |row_categories| %>
+            <% for category in row_categories %>
+                <div id="<%= "category_#{category.id}" %>" class="small-3 columns category">
+                    <div class="tile-label"><span><%= category.name %></span></div>
+                    <%= image_tag("categories/#{category.name}.png") %>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>
