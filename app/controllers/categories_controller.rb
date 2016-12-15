@@ -5,6 +5,6 @@ class CategoriesController < ApplicationController
 
     def show
         @category = Category.find(params[:id])
-        @features = Feature.all
+        @features = @category.features.includes(:category_features).references(:category_features)
     end
 end
