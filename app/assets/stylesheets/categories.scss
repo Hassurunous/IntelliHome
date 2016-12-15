@@ -5,8 +5,18 @@
       CATEGORY TILES
 - - - - - - - - - - - - - - */
 div.category {
-    margin: 3%;
+    margin: 2% 4%;
     float: left !important;
     text-align: center;
     font-weight: bold;
+    font-size: 3.5vw;
+}
+
+div.category a, div.category a:hover, div.category a:visited, div.category a:active, div.category a:focus {
+    font-weight: bold;
+    color: black;
+}
+
+div.category img {
+    max-width: 100%;
 }

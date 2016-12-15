@@ -21,17 +21,18 @@
      NAVIGATION
  - - - - - - - - - - - - - - */
 
- .title-bar-title {
+ .title-bar-title, .title-bar-title:active, .title-bar-title:hover, .title-bar-title:visited, .title-bar-title:focus {
      color: white;
      padding: 2px 5px 5px;
  }
 
- .title-bar-title:hover {
-     color: white;
- }
-
 .menu a {
     color: white;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    border: 1px solid white;
 }
 
 .top-bar {
