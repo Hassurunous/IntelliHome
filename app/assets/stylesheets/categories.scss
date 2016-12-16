@@ -5,11 +5,11 @@
       CATEGORY TILES
 - - - - - - - - - - - - - - */
 div.category {
-    margin: 2% 4%;
     float: left !important;
+    padding: 0;
     text-align: center;
     font-weight: bold;
-    font-size: 3.5vw;
+    font-size: 2.8vw;
 }
 
 div.category a, div.category a:hover, div.category a:visited, div.category a:active, div.category a:focus {
@@ -18,5 +18,6 @@ div.category a, div.category a:hover, div.category a:visited, div.category a:act
 }
 
 div.category img {
+    padding: 0 12% 6%;
     max-width: 100%;
 }

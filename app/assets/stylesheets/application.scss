@@ -17,6 +17,15 @@
 
  @import 'foundation-icons';
 
+ html {
+     max-width: 1200px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+    float: inherit;
+}
  /* - - - - - - - - - - - - - -
      NAVIGATION
  - - - - - - - - - - - - - - */
