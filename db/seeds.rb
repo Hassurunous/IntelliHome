@@ -158,27 +158,27 @@ Product.create(frame_link: '<iframe style="width:120px;height:240px;" marginwidt
 
 # Product.create(frame_link: '', text_link: '', image_link: '', name: '')
 #
-# Feature.create(description: "I want to control my house using voice commands.")                             #15
-# Feature.create(description: "I want my thermostat to adjust itself.")                                       #16
-# Feature.create(description: "I want to know when there is someone at the door, even if I can't hear them.") #17
-# Feature.create(description: "I want to know about water leaks as soon as they happen, even when I'm not home.")                                                                                                     #18
-# Feature.create(description: "I want to moniter my appliances when they're connected.")                      #19
-# Feature.create(description: "I want my water valve to shut off if it detects a leak.")                      #20
-# Feature.create(description: "I want a thermostat that learns my habits.")                                   #21
-# Feature.create(description: "I want to regulate energy usage to save money and the environment.")           #22
-# Feature.create(description: "I want a fan that only turns on when it's too hot/cold.")                      #23
-# Feature.create(description: "I want a heater that turns itself on when it gets too cold.")                  #24
-# Feature.create(description: "I want sprinklers that work automatically.")                                   #25
-# Feature.create(description: "I want sprinklers that won't turn on if it's going to rain.")                  #26
-# Feature.create(description: "I want a lawn that mows itself.")                                              #27
-# Feature.create(description: "I want to know if the plants in my flowerbed/garden are healthy.")             #28
-# Feature.create(description: "I want to listen to my music outdoors.")                                       #29
-# Feature.create(description: "I want to play music in several rooms of my home.")                            #30
-# Feature.create(description: "I want to check in on my kid(s) when I'm not home.")                           #31
-# Feature.create(description: "I want to check in on my pet(s) when I'm not home.")                           #32
-# Feature.create(description: "I want to know that my kids are safe when they aren't home.")                  #33
-# Feature.create(description: "I want to feed my pets remotely.")                                             #34
-# Feature.create(description: "I want to be alerted if there is a gas leak in my home.")                      #35
+# Feature.create(description: "I want to control my house using voice commands.")                             #14
+# Feature.create(description: "I want my thermostat to adjust itself.")                                       #15
+# Feature.create(description: "I want to know when there is someone at the door, even if I can't hear them.") #16
+# Feature.create(description: "I want to know about water leaks as soon as they happen, even when I'm not home.")                                                                                                     #17
+# Feature.create(description: "I want to moniter my appliances when they're connected.")                      #18
+# Feature.create(description: "I want my water valve to shut off if it detects a leak.")                      #19
+# Feature.create(description: "I want a thermostat that learns my habits.")                                   #20
+# Feature.create(description: "I want to regulate energy usage to save money and the environment.")           #21
+# Feature.create(description: "I want a fan that only turns on when it's too hot/cold.")                      #22
+# Feature.create(description: "I want a heater that turns itself on when it gets too cold.")                  #23
+# Feature.create(description: "I want sprinklers that work automatically.")                                   #24
+# Feature.create(description: "I want sprinklers that won't turn on if it's going to rain.")                  #25
+# Feature.create(description: "I want a lawn that mows itself.")                                              #26
+# Feature.create(description: "I want to know if the plants in my flowerbed/garden are healthy.")             #27
+# Feature.create(description: "I want to listen to my music outdoors.")                                       #28
+# Feature.create(description: "I want to play music in several rooms of my home.")                            #29
+# Feature.create(description: "I want to check in on my kid(s) when I'm not home.")                           #30
+# Feature.create(description: "I want to check in on my pet(s) when I'm not home.")                           #31
+# Feature.create(description: "I want to know that my kids are safe when they aren't home.")                  #32
+# Feature.create(description: "I want to feed my pets remotely.")                                             #33
+# Feature.create(description: "I want to be alerted if there is a gas leak in my home.")                      #34
 #
 FeatureProduct.create(feature_id: 1, product_id: 1, additional_info: "This kit includes the Hue Bridge and 3 of their newest generation of full-color Hue Bulbs for the best colors and control of your lighting. In order to sync with your music, you'll need to download an application to connect the music and lights. We recommend Ambify. (Note: If you only need the 3 bulbs in this package, you can ignore the bulb listing!)")
 FeatureProduct.create(feature_id: 1, product_id: 2, additional_info: "The more Hue Bulbs, the more you can mix things up! Each Hue Bridge can support up to 50 bulbs!")
@@ -205,7 +205,7 @@ FeatureProduct.create(feature_id: 9, product_id: 17, additional_info: "The Logit
 FeatureProduct.create(feature_id: 10, product_id: 13, additional_info: "The Denon AVRX4300H is one of the best receivers on the market. It includes full Bluetooth and Wi-Fi capabilities, giving you the power to control all of your home theater equipment from your phone or other smart devices.")
 FeatureProduct.create(feature_id: 11, product_id: 16, additional_info: "The new Amazon Fire Stick allows you to access a truly massive collection of tv shows, movies, and music. When it comes to all-in-one media devices, the Fire Stick is touch to beat.")
 FeatureProduct.create(feature_id: 12, product_id: 16, additional_info: "The new Amazon Fire Stick allows you to access a truly massive collection of tv shows, movies, and music. When it comes to all-in-one media devices, the Fire Stick is touch to beat. Additionally, the new version comes with a voice control through the remote to make the use of the system that much easier and more accessible.")
-FeatureProduct.create(feature_id: 13, product_id: 18, additional_info: "The Nucleus Anywhere Intercoms are a really great gift for family and friends alike. They allow for instantaneous voice and video communication from another Nucleus tablet or directly from your smart phone. Additionally, they include music, news, weather, and other capabilities, such as a Do Not Distrub mode which even allows you to shutter the camera.")
+FeatureProduct.create(feature_id: 13, product_id: 18, additional_info: "The Nucleus Anywhere Intercoms are a really great gift for family and friends alike. They allow for instantaneous voice and video communication from another Nucleus tablet or directly from your smart phone. Additionally, they include music, news, weather, and other capabilities, such as a Do Not Disturb mode which even allows you to shutter the camera.")
 # FeatureProduct.create(feature_id: 1, product_id: 1, additional_info: "")
 # FeatureProduct.create(feature_id: 1, product_id: 1, additional_info: "")
 # FeatureProduct.create(feature_id: 1, product_id: 1, additional_info: "")
