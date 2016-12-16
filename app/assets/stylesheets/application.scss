@@ -24,7 +24,7 @@
  }
 
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
-    float: inherit;
+    float: left;
 }
  /* - - - - - - - - - - - - - -
      NAVIGATION

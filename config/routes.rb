@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:index, :show]
   resources :features, only: [:index]
+  resources :products, only: [:index]
 
   # root to: "features#index"
   root to: "categories#index"

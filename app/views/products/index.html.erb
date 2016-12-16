@@ -1,0 +1,8 @@
+<h1 class="page-head">All Products List</h1>
+<div class="row">
+    <% @products.each do |product| %>
+    <div id="<%= " product_#{product.id}" %>" class="large-4 medium-6 small-12 columns">
+            <%= product.frame_link.html_safe %>
+    </div>
+    <% end %>
+</div>
