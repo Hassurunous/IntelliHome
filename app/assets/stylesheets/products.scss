@@ -12,5 +12,10 @@
 }
 
 [id*="product_"]{
-    height: 420px;
+    min-height: 420px;
+    height: auto;
+}
+
+.title {
+    font-weight: bold;
 }
