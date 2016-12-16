@@ -1,10 +1,11 @@
-<h1 class="page-head">Popular Products List</h1>
+<h1 class="page-head">'<%= @feature.description %>' Products</h1>
 <h5 style="text-align: center; max-width: 70%; margin: 20px auto;">Amazon Links are often blocked by adblockers. If you are using an adblocker, please disable it and refresh this page to view products.</h5>
 <div class="row">
     <% @products.each do |product| %>
-        <div id="<%= " product_#{product.id}" %>" class="large-3 medium-4 small-6 columns">
+        <div id="<%= " product_#{product.id}" %>" class="large-4 medium-6 small-12 columns">
             <div class="amzn-link"><%= product.frame_link.html_safe %></div>
-            <p><%= product.name %></p>
+            <p class="title"><%= product.name %></p>
+            <p class="info"><%= product.additional_info %></p>
         </div>
     <% end %>
 </div>

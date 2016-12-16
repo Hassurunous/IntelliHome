@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* - - - - - - - - - - - - - -
-    FEATURE TILES
+       FEATURE TILES
 - - - - - - - - - - - - - - */
 
 .tile {
@@ -33,4 +33,12 @@
     margin: 10px;
     height: 30px;
     width: 30px;
+}
+
+/* - - - - - - - - - - - - - -
+       PRODUCT TILES
+- - - - - - - - - - - - - - */
+
+.title {
+    font-weight: bold;
 }
