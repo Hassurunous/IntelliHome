@@ -21,10 +21,15 @@
      max-width: 1200px;
      margin-left: auto;
      margin-right: auto;
+     height: 100%;
  }
 
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
     float: left;
+}
+
+.row {
+    height: 100%;
 }
  /* - - - - - - - - - - - - - -
      NAVIGATION
@@ -59,9 +64,19 @@
 .page-head {
     text-align: center;
     display: block;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: bolder;
     margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page-subhead {
+    text-align: center;
+    max-width: 70%;
+    margin: 20px auto;
+    color: red;
+    font-weight: bold;
 }
 
 

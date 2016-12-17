@@ -1,19 +1,24 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .amzn-link {
     margin: auto;
+    display: block;
+    overflow: auto;
 }
 
-.amzn-link iframe {
+.amzn-link a img {
     display: block;
     margin: 2% auto;
+    height: 150px;
+}
+
+.amzn-link a {
+    height: 200px;
 }
 
 [id*="product_"]{
-    min-height: 420px;
-    height: auto;
+    min-height: 350px;
 }
 
 .title {

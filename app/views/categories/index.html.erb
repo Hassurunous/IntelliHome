@@ -1,17 +1,15 @@
 <h1 class="page-head">Feature Categories</h1>
 <div class="container">
     <div class="row">
-        <% @categories.in_groups_of(4, false) do |row_categories| %>
-            <% for category in row_categories %>
-                <div id="<%= " category_#{category.id}" %>" class="small-3 columns category">
-                    <%= link_to category_path(category) do %>
+        <% @categories.each do |category| %>
+            <div id="<%= " category_#{category.id}" %>" class="large-3 medium-4 small-6 columns category">
+                <%= link_to category_path(category) do %>
                     <div class="tile-label">
                         <span><%= category.name %></span>
                     </div>
-                    <%= image_tag("https://s3-us-west-1.amazonaws.com/intellihome-hassurunous/images/categories/#{category.name}.png") %>
-                    <% end %>
-                </div>
-            <% end %>
+                <%= image_tag("https://s3-us-west-1.amazonaws.com/intellihome-hassurunous/images/categories/#{category.name}.png") %>
+                <% end %>
+            </div>
         <% end %>
     </div>
 </div>
