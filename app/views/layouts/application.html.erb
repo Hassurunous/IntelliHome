@@ -59,7 +59,7 @@
                 <div class="top-bar-right">
                     <ul class="menu">
                         <li>
-                            <a href="#">My List</a>
+                            <%= link_to "My List", :controller => :sessions, :action => :show %>
                         </li>
                         <li>
                             <a href="#">Cart</a>
@@ -70,6 +70,7 @@
         </div>
 
         <!-- BODY -->
+
         <%= yield %>
 
         <!-- FOOTER -->
