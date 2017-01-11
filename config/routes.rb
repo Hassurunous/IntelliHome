@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :features, only: [:index, :show]
   resources :products, only: [:index]
+  resources :users, only: [:new, :create, :show]
 
   # root to: "features#index"
   root to: "static_pages#home"
