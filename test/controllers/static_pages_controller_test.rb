@@ -7,12 +7,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Home | IntelliHome"
   end
 
-  test "should get signup" do
-    get signup_url
-    assert_response :success
-    assert_select "title", "Signup | IntelliHome"
-  end
-
   test "should get login" do
     get login_url
     assert_response :success
