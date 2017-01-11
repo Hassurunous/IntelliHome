@@ -59,7 +59,7 @@
                 <div class="top-bar-right">
                     <ul class="menu">
                         <li>
-                            <%= link_to "My List", :controller => :sessions, :action => :show %>
+                            <%= link_to "My List", session_url(session[:session_id]) %>
                         </li>
                         <li>
                             <a href="#">Cart</a>

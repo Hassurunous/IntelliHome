@@ -1,51 +1,67 @@
 class SessionsController < ApplicationController
+    include ApplicationHelper
 
-  #Initialize User List Session
-  def initialize(session)
-      @session = session
-      @session[:list] ||= {}
-  end
+    def new
+    end
 
-  def show
-    @features = session[:list][:features]
-  end
+    def create
+        render 'new'
+    end
 
-  def add_to_list(feature)
-    session[:list] << feature
-  end
+    def show
+        @features = @session[:list][:features]
+    end
 
-  #List Count
-  def list_count
-      if (@session[:list][:features] && @session[:list][:features] != {})
-          @session[:list][:features].count
-      else
-          0
-      end
-  end
+    def add_to_list(feature)
+        session[:list] << feature
+    end
 
-  #List Contents
-  def list_contents
-        features = @session[:list][:features]
+    # Index
+    def index
+        @items = list_session.list_contents
+    end
 
-        if (features && features != {})
+    # Add
+    def add
+        session[:list] ||= {}
+        features = session[:list][:features]
 
-            #Determine Quantities
-            quantities = Hash[features.uniq.map {|i| [i, features.count(i)]}]
-
-            #Get features from DB
-            features_array = feature.find(features.uniq)
-
-            #Create Qty Array
-            features_new = {}
-            features_array.each{
-                |a| features_new[a] = {"qty" => quantities[a.id.to_s]}
-            }
-
-            #Output appended
-            return features_new
-
+        # If exists, add new, else create new variable
+        if features && features != {}
+            session[:list][:features] << params[:id]
+        else
+            session[:list][:features] = Array(params[:id])
         end
 
-  end
+        # Handle the request
+        respond_to do |format|
+            format.json { render json: list_session.build_json }
+            format.html { redirect_to list_index_path }
+        end
+    end
 
+    # Delete
+    def delete
+        session[:list] ||= {}
+        features = session[:list][:features]
+        id = params[:id]
+        all = params[:all]
+
+        # Is ID present?
+        if id.blank?
+            features.delete
+        else
+            if all.blank?
+                features.delete_at(features.index(id) || features.length)
+            else
+                features.delete(params['id'])
+            end
+        end
+
+        # Handle the request
+        respond_to do |format|
+            format.json { render json: list_session.build_json }
+            format.html { redirect_to list_index_path }
+        end
+    end
 end
