@@ -34,7 +34,7 @@
 
         <!-- BODY -->
         <% flash.each do |message_type, message| %>
-        <div class="success callout" data-closable="slide-out-right">
+        <div class="<%= message_type %> callout" data-closable>
             <%= message %>
             <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
                 <span aria-hidden="true">&times;</span>
