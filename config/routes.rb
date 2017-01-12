@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'home', to: "static_pages#home", as: "home"
 
-  get 'signup', to: "users#new", as: "signup"
+  # get 'signup', to: "users#new", as: "signup"
 
   get 'login', to: "static_pages#login", as: "login"
 
@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :features, only: [:index, :show]
   resources :products, only: [:index]
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show, :index]
 
   # root to: "features#index"
   root to: "static_pages#home"
