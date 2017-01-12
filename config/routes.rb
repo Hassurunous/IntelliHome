@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :features, only: [:index, :show]
   resources :products, only: [:index]
   resources :users, only: [:show, :index]
-  
+
   root to: "static_pages#home"
 
   get 'home', to: "static_pages#home", as: "home"
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   post 'login', to: "sessions#create"
 
-  get 'logout', to: "sessions#destroy", as: "logout"
+  delete 'logout', to: "sessions#destroy", as: "logout"
 
   get 'about', to: "static_pages#about", as: "about"
 
