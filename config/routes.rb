@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   get 'home', to: "static_pages#home", as: "home"
 
-  # get 'signup', to: "users#new", as: "signup"
+  get 'signup', to: "users#new", as: "signup"
+
+  post 'signup', to: "users#create"
 
   get 'login', to: "static_pages#login", as: "login"
 

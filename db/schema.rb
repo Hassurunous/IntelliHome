@@ -51,11 +51,6 @@ ActiveRecord::Schema.define(version: 20170111204221) do
     t.datetime "image_updated_at"
   end
 
-  create_table "list_sessions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "products", force: :cascade do |t|
     t.text     "frame_link"
     t.text     "text_link"

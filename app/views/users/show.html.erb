@@ -1,0 +1,11 @@
+<% provide(:title, "Users") %>
+<h1 class="page-head">User Information</h1>
+<div class="row">
+    <div id="<%= " user_#{@user.id}" %>" class="large-3 medium-4 small-6 columns">
+        <p><%= @user.first_name %>
+            <%= @user.last_name %>
+        </p>
+        <p><%= @user.email %>
+        </p>
+    </div>
+</div>

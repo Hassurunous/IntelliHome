@@ -11,8 +11,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     # Validation of form fields handled with jQuery Validation plugin
     if @user.save
-      redirect_to @user, alert: "User created successfully."
+      flash[:success] = "User created successfully."
+      redirect_to @user
     else
+      render 'new'
     end
 
   end

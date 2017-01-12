@@ -4,7 +4,8 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <title><%= yield(:title) %> | IntelliHome</title>
+        <title><%= yield(:title) %>
+            | IntelliHome</title>
 
         <%= stylesheet_link_tag    "application" %>
         <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -33,6 +34,14 @@
         <%= render 'layouts/header' %>
 
         <!-- BODY -->
+        <% flash.each do |message_type, message| %>
+        <div class="success callout" data-closable="slide-out-right">
+            <%= message %>
+            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <% end %>
         <%= yield %>
 
         <!-- FOOTER -->
