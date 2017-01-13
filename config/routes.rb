@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 
   post 'login', to: "sessions#create"
 
-  delete 'logout', to: "sessions#destroy", as: "logout"
+  delete "logout", to: "sessions#destroy", as: "logout"
 
   get 'about', to: "static_pages#about", as: "about"
 
