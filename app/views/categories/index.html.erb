@@ -1,16 +1,18 @@
 <% provide(:title, "Categories") %>
-<h1 class="page-head">Feature Categories</h1>
 <div class="container">
     <div class="row">
         <% @categories.each do |category| %>
-            <div id="<%= " category_#{category.id}" %>" class="large-3 medium-4 small-6 columns category">
-                <%= link_to category_path(category) do %>
-                    <div class="tile-label">
-                        <span><%= category.name %></span>
-                    </div>
-                <%= image_tag("https://s3-us-west-1.amazonaws.com/intellihome-hassurunous/images/categories/#{category.name}.png") %>
-                <% end %>
+        <div id="<%= " category_#{category.id}" %>" class="category">
+            <%= link_to category_path(category) do %>
+            <h1 class="tile-label">
+                <%= category.name %>
+            </h1>
+            <div class="img-holder">
+                <%= image_tag("https://s3-us-west-1.amazonaws.com/intellihome-hassurunous/images/categories/#{category.name}.jpg") %>
+                <div class="overlay"></div>
             </div>
+            <% end %>
+        </div>
         <% end %>
     </div>
 </div>

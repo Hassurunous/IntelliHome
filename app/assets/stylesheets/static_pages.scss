@@ -1,3 +1,374 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*Body width modified to fit standard 1200px width grid. Height modified to ensure even height of enclosed divs, based on window size.  */
+ body, html {
+     height: 100%;
+     width: 100%;
+     margin: auto;
+     //margin-top: 20px;
+     font-family: sans-serif;
+ }
+
+.column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
+    float: left;
+}
+
+.row {
+    height: 100%;
+}
+
+.backgroundImg {
+    //    background: white image-url("kitchen-fade.png") no-repeat center;
+    position: fixed;
+    z-index: -2;
+
+    display: block;
+    width: 100%;
+    height: 1080px;
+    max-height: 100%;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+h2 {
+    text-align: center;
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding-top: 20px;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    font-size: 1.5em;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.navbreak {
+    display: none;
+}
+
+span.bold {
+    font-weight: bold;
+}
+
+span.light {
+    font-weight: lighter;
+}
+
+/*titlebar encloses the main title header and the navbar, placing them at a fixed position at the top of the screen.*/
+.titlebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    height: 40px;
+    color: rgba(73, 0, 145, 1);
+    background: white;
+    z-index: 9999;
+}
+
+/*Various sections split into boxes of height and width equal to the body height and width.*/
+.section {
+    height: calc(90% - 60px);
+    width: 100%;
+    padding: 40px;
+}
+
+#landing {
+    height: calc(100% - 60px);
+    width: 100%;
+    padding-top: 30px;
+}
+
+/*Anchor for the navigation on the page.*/
+div.anchor {
+    float: left;
+    margin-top: -40px;
+    padding-top: 40px;
+    display: none;
+    -webkit-transition: 0.6s ease-in-out;
+    transition: 0.6s ease-in-out;
+}
+
+/*First box. Should include product name and perhaps a short tagline about the product.*/
+.mainTitle {
+    background: rgba(255, 255, 255, 0) image-url('kitchen-fade.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+div.mainTitle img {
+    height: 100%;
+    width: auto;
+    min-width: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+div.mainTitle h1, div.mainTitle h2 {
+    position: absolute;
+    z-index: 3;
+}
+
+div.mainTitle h1 {
+    top: 40%;
+    left: -10%;
+}
+
+div.mainTitle h2 {
+    top: 48%;
+    left: 5%;
+}
+
+/*First explanatory section of the home page.*/
+div.about {
+    background-color: rgba(230,230,230,0.9);
+    overflow: hidden;
+}
+
+div.about h2 {
+    color: #2D7DD2;
+}
+
+div.about p {
+    font-family: Helvetica;
+    padding: 10%;
+    padding-top: 20%;
+    text-align: center;
+    font-weight: light;
+    font-size: 24px;
+    color: #000000;
+    line-height: 36px;
+}
+
+/*This section for the "savings" section of the home page.*/
+.savings {
+    background-color: rgba(0,0,0, 0.9);
+    text-align: center;
+}
+
+.savings p, .savings h2 {
+    color: white;
+    margin-bottom: 0;
+}
+
+.savings img {
+    margin: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    display: inline-block;
+    /*height: 100%;*/
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 80%;
+    vertical-align: middle;
+}
+
+.savings img {
+    width: 250px;
+}
+
+div.savings p {
+    font-family: Helvetica;
+    padding: 10%;
+    padding-top: 20%;
+    text-align: center;
+    font-weight: light;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+/*This section for contact information, contact links, and other forms of social links.*/
+.contact {
+    background-color: rgba(230,230,230,0.9);
+}
+
+.contact p, .contact h2 {
+    color: black;
+}
+
+.contact p {
+    padding-top: 60px;
+}
+
+.contact img {
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    /*height: 100%;*/
+    width: 35%;
+}
+
+/*This css is holding the place of whatever elements should be inside the various divs in the website. As the divs are filled in, custom classes may be more reasonable, or change the name of this class to avoid confusion post-release.*/
+.sectionText {
+    color: white;
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 1.5;
+}
+
+#responsiveBreak {
+    display:none;
+}
+
+/* - - - - - - - - - - - - - -
+    RESPONSIVE
+- - - - - - - - - - - - - - */
+
+@media screen and (max-width: 768px) {
+
+    .titlebar {
+        padding-top: 5px;
+        height: 30px;
+    }
+
+    .downloads img {
+        margin: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 20px;
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 70%;
+        vertical-align: middle;
+    }
+
+    .downloads img.appstore {
+        width: 200px;
+    }
+
+    .sectionText {
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+        vertical-align: middle;
+    }
+
+    .backgroundImg {
+        background: white url("../img/vertbg.png") no-repeat center;
+        position: fixed;
+        top: 30px;
+        z-index: -2;
+
+        display: block;
+        width: 100%;
+        height: 1080px;
+        max-height: 100%;
+        background-size: contain;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1.25em;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+    nav a:first-child {
+        padding-left: 5px;
+    }
+
+    nav a:last-child {
+        padding-right: 5px;
+    }
+
+    .anchor {
+        margin-top: -35px;
+        padding-top: 35px;
+    }
+
+    .prevBtn {
+        left: 1%;
+    }
+
+    .nextBtn {
+        right: 1%;
+    }
+
+    #responsiveBreak {
+        display:inline;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+
+    .titlebar {
+        padding-top: 8px;
+        height: 30px;
+    }
+
+    .downloads img {
+        margin: auto;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 20px;
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 60%;
+        vertical-align: middle;
+    }
+
+    .downloads img.appstore {
+        width: 200px;
+    }
+
+    .sectionText {
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.5;
+        vertical-align: middle;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1em;
+        padding-left: 6px;
+        padding-right: 6px;
+        text-decoration: none;
+        font-weight: bolder;
+    }
+
+    nav a:first-child {
+        padding-left: 3px;
+    }
+
+    nav a:last-child {
+        padding-right: 3px;
+    }
+}
