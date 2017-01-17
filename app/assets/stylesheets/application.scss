@@ -28,6 +28,11 @@
    background-color: rgba(245,245,245,0.9);
  }
 
+ html, body {
+   margin: auto;
+   margin-top: 30px;
+ }
+
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
     float: left;
 }
@@ -54,8 +59,12 @@
 }
 
 .top-bar {
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(20,20,20,1.0);
     z-index: 999999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .top-bar ul {
