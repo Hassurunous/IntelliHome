@@ -30,7 +30,7 @@
 
  html, body {
    margin: auto;
-   margin-top: 30px;
+   margin-top: 25px;
  }
 
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
@@ -46,12 +46,14 @@
 
  .title-bar-title, .title-bar-title:active, .title-bar-title:hover, .title-bar-title:visited, .title-bar-title:focus {
      color: white;
-     padding: 2px 5px 5px;
+     padding: 8px 40px 5px 20px;
+     margin-right: 250px;
+     font-weight: bold;
  }
 
 .menu a {
     color: white;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 .menu a:hover {
