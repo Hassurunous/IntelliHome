@@ -23,7 +23,7 @@
         <div class="top-bar-right">
             <ul class="menu">
                 <li>
-                    <% if logged_in? %>
+                    <% if !current_user.guest? %>
                         <li class="dropdown">
                             <ul class="dropdown menu" data-dropdown-menu>
                                 <li>
@@ -43,7 +43,7 @@
                     <% end %>
                 </li>
                 <li>
-                    <a href="#">My List</a>
+                    <li><%= link_to "My List", current_user %></li>
                 </li>
                 <li>
                     <a href="#">Cart</a>

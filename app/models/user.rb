@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+    has_many :features
+
     before_save { email.downcase! }
     validates :first_name, presence: true, length: { maximum: 50 }
     validates :last_name, presence: true, length: { maximum: 50 }
@@ -37,5 +39,21 @@ class User < ApplicationRecord
     # Forgets a user.
     def forget
         update_attribute(:remember_digest, nil)
+    end
+
+    def self.new_guest
+        puts "self.new_guest working..."
+        new(first_name: "#{Time.now}",
+            last_name: "#{Time.now}",
+            email: "#{Time.now}@bogus.com",
+            password_digest: 'bogus')
+    end
+
+    # def move_to(user)
+    #     tasks.update_all(user_id: user.id)
+    # end
+
+    def guest?
+        email.include?('bogus.com')
     end
 end
