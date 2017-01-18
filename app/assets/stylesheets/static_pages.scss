@@ -163,6 +163,12 @@ div.about p {
 .savings {
     background: rgba(255, 255, 255, 0) image-url('living.png') no-repeat center;
     text-align: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+
 }
 
 .savings p, .savings h2 {

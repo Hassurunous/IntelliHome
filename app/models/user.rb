@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_many :list_items, dependent: :destroy
-    has_many :features, :through => :list_items
-
+    has_many :features, through: :list_items
+    attr_accessor :remember_token
     before_save { email.downcase! }
     validates :first_name, presence: true, length: { maximum: 50 }
     validates :last_name, presence: true, length: { maximum: 50 }
@@ -10,8 +10,8 @@ class User < ApplicationRecord
                       format: { with: VALID_EMAIL_REGEX },
                       uniqueness: { case_sensitive: false }
     has_secure_password
-    validates :password, presence: true, length: { minimum: 6 }
-    attr_accessor :remember_token
+    validates :password, presence: true, length: { minimum: 6 }, unless: :guest?
+
 
     # Returns the hash digest of the given string.
     def self.digest(string)
@@ -43,16 +43,16 @@ class User < ApplicationRecord
     end
 
     def self.new_guest
-        puts "self.new_guest working..."
-        new(first_name: "#{Time.now}",
-            last_name: "#{Time.now}",
-            email: "#{Time.now}@bogus.com",
+        puts 'self.new_guest working...'
+        new(first_name: "Guest",
+            last_name: "User",
+            email: "#{Time.now.to_i}@bogus.com",
             password_digest: 'bogus')
     end
 
-    # def move_to(user)
-    #     tasks.update_all(user_id: user.id)
-    # end
+    def move_to(user)
+        features.update_all(user_id: user.id)
+    end
 
     def guest?
         email.include?('bogus.com')

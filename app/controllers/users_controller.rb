@@ -11,7 +11,7 @@ class UsersController < ApplicationController
         puts "params[:user] = #{params[:user]}"
         @user = params[:user] ? User.new(user_params) : User.new_guest
         if @user.save
-            current_user.move_to(@user) if current_user && current_user.guest?
+            log_in @user
             session[:user_id] = @user.id
             redirect_to root_url
         else
@@ -24,11 +24,29 @@ class UsersController < ApplicationController
         @features = @user.features
     end
 
-    def add_feature
+    def cart
+        @user = User.find(params[:id])
+        @features = @user.features
+        @products = []
+        @features.each do |feature|
+            feature.products.select('products.*, feature_products.additional_info').each do | product |
+                @products.push(product)
+                puts "product.id = #{product.id}"
+            end
+        end
+        @products = @products.uniq { |p| p.id }
+    end
+
+    def toggle_feature
+        puts request.path
         @user = User.find(session[:user_id])
         @features = @user.features
         @feature = Feature.find(params[:id])
-        @features << @feature
+        if @features.exists?(@feature.id)
+            ListItem.where(user_id: @user.id, feature_id: @feature.id).destroy_all
+        else
+            @features << @feature
+        end
     end
 
     private

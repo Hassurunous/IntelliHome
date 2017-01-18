@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'contact', to: "static_pages#contact", as: "contact"
 
-  post 'add_feature/:id', to: "users#add_feature", as: "add_feature"
+  post 'toggle_feature/:id', to: "users#toggle_feature", as: "toggle_feature"
+
+  get 'cart/:id', to: 'users#cart', as: 'cart'
 
 end

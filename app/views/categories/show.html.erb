@@ -3,7 +3,7 @@
 <div class="row">
     <% @features.each do |feature| %>
     <div id="<%= " feature_#{feature.id}" %>" class="large-4 medium-6 small-12 columns">
-        <%= link_to add_feature_path(feature.id), method: :post do %>
+        <%= link_to toggle_feature_path(feature.id), method: :post do %>
         <p class="tile">
             <%= feature.description %>
         </p>
