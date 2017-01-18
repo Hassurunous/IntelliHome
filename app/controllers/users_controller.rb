@@ -8,12 +8,12 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.new(user_params)
+        @user = user_params ? User.new(user_params) : User.new_guest
         # Validation of form fields handled with jQuery Validation plugin
         if @user.save
             log_in @user
             flash[:success] = 'User created successfully.'
-            redirect_to @user
+            redirect_to root_url
         else
             render 'new'
         end

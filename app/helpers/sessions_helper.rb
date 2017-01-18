@@ -2,6 +2,7 @@ module SessionsHelper
     # Logs in the user
     def log_in(user)
         session[:user_id] = user.id
+        # add if to log out guest then log in if guest signed in
     end
 
     # Remembers the user when they log in
@@ -35,11 +36,20 @@ module SessionsHelper
                 log_in user
                 @current_user = user
             end
+        # else log in guest user account in database; add Guest User to database
+        else
+            guest_user
         end
     end
 
     # Returns true if the user is logged in, false otherwise.
     def logged_in?
-        !current_user.nil?
+        !current_user.nil? && !current_user.guest?
     end
+
+    private
+
+        def guest_user
+            @guest ||= Guest.new
+        end
 end
