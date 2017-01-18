@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :features, only: [:index, :show]
   resources :products, only: [:index]
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show]
 
   root to: "static_pages#home"
 
@@ -26,5 +26,7 @@ Rails.application.routes.draw do
   get 'help', to: "static_pages#help", as: "help"
 
   get 'contact', to: "static_pages#contact", as: "contact"
+
+  post 'add_feature/:id', to: "users#add_feature", as: "add_feature"
 
 end

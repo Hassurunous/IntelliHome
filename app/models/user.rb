@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-    has_many :features
+    has_many :list_items, dependent: :destroy
+    has_many :features, :through => :list_items
 
     before_save { email.downcase! }
     validates :first_name, presence: true, length: { maximum: 50 }

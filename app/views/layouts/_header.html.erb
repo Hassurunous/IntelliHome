@@ -23,7 +23,7 @@
         <div class="top-bar-right">
             <ul class="menu">
                 <li>
-                    <% if !current_user.guest? %>
+                    <% if logged_in? %>
                         <li class="dropdown">
                             <ul class="dropdown menu" data-dropdown-menu>
                                 <li>

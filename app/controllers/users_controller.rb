@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     end
 
     def create
+        puts "params[:user] = #{params[:user]}"
         @user = params[:user] ? User.new(user_params) : User.new_guest
         if @user.save
             current_user.move_to(@user) if current_user && current_user.guest?
@@ -20,6 +21,14 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        @features = @user.features
+    end
+
+    def add_feature
+        @user = User.find(session[:user_id])
+        @features = @user.features
+        @feature = Feature.find(params[:id])
+        @features << @feature
     end
 
     private
