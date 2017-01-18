@@ -18,7 +18,7 @@
  @import 'foundation-icons';
 
  html {
-     max-width: 1200px;
+     max-width: 100%;
      margin-left: auto;
      margin-right: auto;
      height: 100%;
@@ -39,6 +39,7 @@
 
 .row {
     height: 100%;
+    max-width: 100%;
 }
  /* - - - - - - - - - - - - - -
      NAVIGATION
