@@ -7,24 +7,28 @@ Rails.application.routes.draw do
   resources :products, only: [:index]
   resources :users, only: [:show, :index]
 
-  root to: "static_pages#home"
+  root to: 'static_pages#home'
 
-  get 'home', to: "static_pages#home", as: "home"
+  get 'home', to: 'static_pages#home', as: 'home'
 
-  get 'signup', to: "users#new", as: "signup"
+  get 'signup', to: 'users#new', as: 'signup'
 
-  post 'signup', to: "users#create"
+  post 'signup', to: 'users#create'
 
-  get 'login', to: "sessions#new", as: "login"
+  get 'login', to: 'sessions#new', as: 'login'
 
-  post 'login', to: "sessions#create"
+  post 'login', to: 'sessions#create'
 
-  delete "logout", to: "sessions#destroy", as: "logout"
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
 
-  get 'about', to: "static_pages#about", as: "about"
+  get 'about', to: 'static_pages#about', as: 'about'
 
-  get 'help', to: "static_pages#help", as: "help"
+  get 'help', to: 'static_pages#help', as: 'help'
 
-  get 'contact', to: "static_pages#contact", as: "contact"
+  get 'contact', to: 'static_pages#contact', as: 'contact'
+
+  get 'add_to_list/:id', to: 'features#add_to_list', as: 'add_to_list'
+
+  get 'mylist', to: 'lists#show', as: 'mylist'
 
 end

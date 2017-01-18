@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :features
+    has_one :list
 
     before_save { email.downcase! }
     validates :first_name, presence: true, length: { maximum: 50 }
@@ -42,7 +42,6 @@ class User < ApplicationRecord
     end
 
     def self.new_guest
-        puts "self.new_guest working..."
         new(first_name: "#{Time.now}",
             last_name: "#{Time.now}",
             email: "#{Time.now}@bogus.com",

@@ -1,9 +1,9 @@
-<% provide(:title, "Features") %>
-<h1 class="page-head"><%= @category.name %> Features</h1>
+<% provide(:title, "My List") %>
+<h1 class="page-head">My Features</h1>
 <div class="row">
-    <% @features.each do |feature| %>
+    <% current_list.features.each do |feature| %>
     <div id="<%= " feature_#{feature.id}" %>" class="large-4 medium-6 small-12 columns">
-        <%= link_to add_to_list_path(feature) do %>
+        <%= link_to '', :controller => "features", :action => "add_to_list", :id => feature do %>
         <p class="tile">
             <%= feature.description %>
         </p>
