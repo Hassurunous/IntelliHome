@@ -1,26 +1,26 @@
 <% provide(:title, "Categories") %>
-<% @categories.each do |category| %>
-    <% @features = category.list_features %>
-    <div id="<%= "category_#{category.id}" %>" class="category">
-        <h1 class="tile-label">
-            <%= category.name %>
-        </h1>
-        <div class="img-holder">
-            <%= image_tag("https://s3-us-west-1.amazonaws.com/intellihome-hassurunous/images/categories/#{category.name}.jpg") %>
+<div class="categories_container">
+    <% @categories.each do |category| %>
+        <% @features = category.list_features %>
+        <div id="<%= "category_#{category.id}" %>" class="category">
+            <h1 class="tile-label">
+                <%= category.name %>
+            </h1>
+            <div class="img-holder">
+                <%= image_tag("https://s3-us-west-1.amazonaws.com/intellihome-hassurunous/images/categories/#{category.name}.jpg") %>
+            </div>
+            <div class="overlay"></div>
         </div>
-        <div class="overlay"></div>
-    </div>
-    <div id="<%= "drawer_#{category.id}" %>" class="drawer">
-        <% @features.each do |feature| %>
-        <div id="<%= " feature_#{feature.id}" %>" class="large-4 medium-6 small-12 columns">
-            <%= link_to toggle_feature_path(feature.id), method: :post do %>
-            <p class="tile <% if current_user.features.includes(feature)
-                                    "selected"
-                              end%>">
-                <%= feature.description %>
-            </p>
+        <div id="<%= "drawer_#{category.id}" %>" class="drawer">
+            <% @features.each do |feature| %>
+            <div id="<%= " feature_#{feature.id}" %>" class="large-4 medium-6 small-12 columns">
+                <%= link_to toggle_feature_path(feature.id), method: :post do %>
+                    <p class="tile">
+                        <%= feature.description %>
+                    </p>
+                <% end %>
+            </div>
             <% end %>
         </div>
-        <% end %>
-    </div>
-<% end %>
+    <% end %>
+</div>

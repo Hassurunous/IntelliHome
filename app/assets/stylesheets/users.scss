@@ -1,3 +1,44 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/*First box. Should include product name and perhaps a short tagline about the product.*/
+.list_head {
+    background: rgba(255, 255, 255, 0) image-url('list.png') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Avenir, Helvetica;
+    letter-spacing: 0.3em;
+    margin-bottom: 10px;
+}
+
+div.list_head img {
+    height: 100%;
+    width: auto;
+    min-width: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+div.list_head h1, div.list_head h2 {
+    position: absolute;
+    z-index: 3;
+}
+
+div.list_head h1 {
+    top: 20%;
+    left: 0%;
+}
+
+div.list_head h2 {
+    top: 24%;
+    left: 5%;
+}
+
+#list_head {
+    height: calc(40% - 50px);
+    width: 100%;
+    padding-top: 30px;
+}

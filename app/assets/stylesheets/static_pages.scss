@@ -144,6 +144,7 @@ div.about {
     overflow: hidden;
     display: flex;
     align-items: center;
+    height: 75%;
 }
 
 div.about h2 {
@@ -151,10 +152,10 @@ div.about h2 {
 }
 
 div.about p {
-    font-family: Helvetica;
+    font-family: Avenir, Helvetica;
     padding: 10%;
     padding-top: 20%;
-    text-align: center;
+    text-align: left;
     font-weight: light;
     font-size: 24px;
     color: #000000;
@@ -210,6 +211,7 @@ div.savings p {
 /*This section for contact information, contact links, and other forms of social links.*/
 .meet {
     background-color: rgba(255,255,255,1);
+    max-height: 75%;
 }
 
 .meet p, .meet h2 {
@@ -222,11 +224,12 @@ div.savings p {
 }
 
 .meet h2 {
-    padding-bottom: 10px;
+    padding-bottom: 70px;
 }
 
 .meet p {
     padding-top: 10px;
+    text-align: left;
 }
 
 .meet img {

@@ -4,6 +4,7 @@
 /* - - - - - - - - - - - - - -
       CATEGORY TILES
 - - - - - - - - - - - - - - */
+
 div.category {
     float: left !important;
     padding: 0;
@@ -24,8 +25,12 @@ div.category a:visited {
     color: rgba(245,245,245,1);
 }
 
-div.category:first-child {
-    margin-top: 5px;
+.category:first-child{
+    margin-top: 10px;
+}
+
+#category_8 {
+    margin-bottom: 0px;
 }
 
 h1.tile-label {

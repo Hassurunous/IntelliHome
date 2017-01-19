@@ -1,5 +1,7 @@
 <% provide(:title, "My List") %>
-<h1 class="page-head"><%= @user.first_name %>'s Features</h1>
+<div id="list_head" class="list_head">
+    <h1><%= @user.first_name.upcase %>'S FEATURES</h1>
+</div>
 <div class="row">
     <% @features.each do |feature| %>
     <div id="<%= " feature_#{feature.id}" %>" class="large-4 medium-6 small-12 columns">
