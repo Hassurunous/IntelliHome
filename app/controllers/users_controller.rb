@@ -8,11 +8,9 @@ class UsersController < ApplicationController
     end
 
     def create
-        puts "params[:user] = #{params[:user]}"
-        @user = params[:user] ? User.new(user_params) : User.new_guest
+        @user = params[:user] ? User.new(user_params) : create_new_guest
         if @user.save
             log_in @user
-            session[:user_id] = @user.id
             redirect_to root_url
         else
             render :new

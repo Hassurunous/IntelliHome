@@ -12,7 +12,6 @@ class User < ApplicationRecord
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }, unless: :guest?
 
-
     # Returns the hash digest of the given string.
     def self.digest(string)
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -40,14 +39,6 @@ class User < ApplicationRecord
     # Forgets a user.
     def forget
         update_attribute(:remember_digest, nil)
-    end
-
-    def self.new_guest
-        puts 'self.new_guest working...'
-        new(first_name: "Guest",
-            last_name: "User",
-            email: "#{Time.now.to_i}@bogus.com",
-            password_digest: 'bogus')
     end
 
     def move_to(user)

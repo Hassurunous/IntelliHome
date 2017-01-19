@@ -1,7 +1,9 @@
 // Place all the styles related to the features controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
+html, body {
+    margin-top: 30px !important;
+}
 /* - - - - - - - - - - - - - -
        FEATURE TILES
 - - - - - - - - - - - - - - */
@@ -9,19 +11,24 @@
 .tile {
     height: 200px;
     width: 100%;
-    color: white;
+    color: rgba(25, 25, 25, 1);
     font-weight: bold;
     text-align: center;
     font-size: 1.3em;
-    background: rgba(25, 25, 25, 1);
+    background: white;
     float: left !important;
     padding: 40px 40px !important;
-    border-radius: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: rgba(236, 236, 236, 100);
     position: relative;
+    font-family: Avenir, Helvetica;
 }
 
 .tile:hover {
-    background: rgba(45, 45, 45, 1);
+    border-width: 3px;
+    border-color: rgba(175,175,175,1);
 }
 
 .tile-badges {
@@ -34,4 +41,9 @@
     margin: 10px;
     height: 30px;
     width: 30px;
+}
+
+.selected {
+    background: rgba(242,242,242,1);
+    border-color: rgba(175,175,175,1);
 }

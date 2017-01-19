@@ -8,7 +8,7 @@
      width: 100%;
      margin: auto;
      //margin-top: 20px;
-     font-family: sans-serif;
+     font-family: Helvetica;
  }
 
 .column:last-child:not(:first-child), .columns:last-child:not(:first-child) {
@@ -142,6 +142,8 @@ div.mainTitle h2 {
 div.about {
     background-color: rgba(255,255,255,1);
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 div.about h2 {
@@ -202,6 +204,7 @@ div.savings p {
     font-weight: light;
     font-size: 24px;
     line-height: 36px;
+    font-weight: 400;
 }
 
 /*This section for contact information, contact links, and other forms of social links.*/
@@ -213,6 +216,15 @@ div.savings p {
     color: black;
 }
 
+.meet div {
+    display: flex;
+    align-items: center;
+}
+
+.meet h2 {
+    padding-bottom: 10px;
+}
+
 .meet p {
     padding-top: 10px;
 }
@@ -221,7 +233,8 @@ div.savings p {
     margin: auto;
     margin-top: 20px;
     display: block;
-    max-height: 220px;
+    height: auto;
+    max-height: 330px;
 }
 
 /*This css is holding the place of whatever elements should be inside the various divs in the website. As the divs are filled in, custom classes may be more reasonable, or change the name of this class to avoid confusion post-release.*/

@@ -39,8 +39,15 @@ module SessionsHelper
         end
     end
 
+    def create_guest_user
+        u = User.new(first_name: "Guest", email: "guest_#{Time.now.to_i}#{rand(99)}@bogus.com")
+        u.save!(validate: false)
+        session[:guest_user_id] = u.id
+        u
+    end
+
     # Returns true if the user is logged in, false otherwise.
     def logged_in?
-        !current_user.nil?
+        !current_user.nil? && !current_user.guest?
     end
 end

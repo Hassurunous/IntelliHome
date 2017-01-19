@@ -22,6 +22,7 @@
      margin-left: auto;
      margin-right: auto;
      height: 100%;
+     font-family: Helvetica;
  }
 
  body {
@@ -50,6 +51,7 @@
      padding: 8px 40px 5px 20px;
      margin-right: 250px;
      font-weight: bold;
+     letter-spacing: 0.05em;
  }
 
 .menu a {
@@ -68,6 +70,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    letter-spacing: 0.1em;
 }
 
 .top-bar ul {
@@ -106,6 +109,21 @@
  /* - - - - - - - - - - - - - -
      FOOTER
  - - - - - - - - - - - - - - */
+
+.footer {
+  background-color: rgba(20,20,20,1);
+  height: 100px;
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.footer h4 {
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  padding: 20px;
+}
 
  .debug_dump {
   clear: both;
