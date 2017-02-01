@@ -1,7 +1,7 @@
 $(document).on("click", ".category", function() {
   var drawer_selector = '#drawer_' + ($(this).attr('id').replace('category_', ''));
   console.log(drawer_selector);
-  $(drawer_selector).toggle(500);
+  $(drawer_selector).toggleClass("close");
 });
 
 $(document).on("click", ".tile", function() {
