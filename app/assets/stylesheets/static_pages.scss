@@ -171,7 +171,6 @@ div.about p {
     justify-content: center;
     align-items: center;
     overflow: hidden
-
 }
 
 .savings p, .savings h2 {
@@ -208,14 +207,61 @@ div.savings p {
     font-weight: 400;
 }
 
+/*This section for MailChimp subscriber form.*/
+.mailing_list {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    max-height: 75%;
+}
+
+.mailing_list p, .mailing_list h2 {
+    color: black;
+}
+
+.mailing_list input {
+}
+.mailing_list div {
+    text-align: left;
+}
+
+.mailing_list h2 {
+    padding-bottom: 10px;
+}
+
+.mailing_list .indicates-required {
+    text-align: right;
+    padding-bottom: 40px;
+}
+
+.mailing_list p {
+    padding-top: 10px;
+    text-align: left;
+}
+
+.mailing_list .button {
+    width: 100%;
+    max-width: 200px;
+}
+
+.mailing_list .clear {
+    padding-left: 0;
+}
+
+.mailing_list label {
+    font-size: 1.3em;
+}
+
+
 /*This section for contact information, contact links, and other forms of social links.*/
 .meet {
-    background-color: rgba(255,255,255,1);
+    background-color: black;
     max-height: 75%;
 }
 
 .meet p, .meet h2 {
-    color: black;
+    color: white;
 }
 
 .meet div {
@@ -238,6 +284,7 @@ div.savings p {
     display: block;
     height: auto;
     max-height: 330px;
+    border-radius: 50%;
 }
 
 /*This css is holding the place of whatever elements should be inside the various divs in the website. As the divs are filled in, custom classes may be more reasonable, or change the name of this class to avoid confusion post-release.*/
