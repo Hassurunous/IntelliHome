@@ -85,6 +85,7 @@ span.light {
 /*Various sections split into boxes of height and width equal to the body height and width.*/
 .section {
     height: calc(90% - 60px);
+    min-height: 600px;
     width: 100%;
     padding: 40px;
 }
@@ -303,6 +304,18 @@ div.savings p {
     RESPONSIVE
 - - - - - - - - - - - - - - */
 
+@media screen and (max-width: 1024px) {
+    .meet {
+        height: 1000px;
+        max-height: 1500px;
+    }
+
+    .mailing_list {
+        height: 750px;
+        max-height: 1500px;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .titlebar {
@@ -336,10 +349,6 @@ div.savings p {
     }
 
     .backgroundImg {
-        background: white url("../img/vertbg.png") no-repeat center;
-        position: fixed;
-        top: 30px;
-        z-index: -2;
 
         display: block;
         width: 100%;
@@ -385,6 +394,20 @@ div.savings p {
         display:inline;
     }
 
+    .meet {
+        height: 850px;
+        max-height: 1000px;
+    }
+
+    .meet img {
+        margin: auto;
+        margin-top: 80px;
+    }
+
+    .meet p {
+        margin: auto;
+        margin-top: 80px;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -409,6 +432,11 @@ div.savings p {
 
     .downloads img.appstore {
         width: 200px;
+    }
+
+    .mailing_list {
+        min-height: 700px;
+        max-height: 1000px;
     }
 
     .sectionText {
